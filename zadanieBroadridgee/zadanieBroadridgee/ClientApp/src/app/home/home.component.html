@@ -1,0 +1,9 @@
+
+<p *ngIf="!time"><em>Ładowanie</em></p>
+
+<p *ngIf="time && time.datetime && time.timezones == null">{{time.datetime.split("T")[1].split("-")[0].split("+")[0]}}</p>
+<p *ngIf="time && time.timezones">{{time.timezones}}</p>
+<p *ngIf="time && time.datetime == null && time.timezones == null ">Api jest niedostępne</p>
+
+
+
